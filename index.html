@@ -1,111 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hookrooms | FIFA 2026 Premium Stays</title>
 
-    <title>FIFA 2026 Travel | Premium Rooms Booking</title>
+  <!-- Facebook Preview -->
+  <meta property="og:title" content="Hookrooms | FIFA 2026 Premium Stays" />
+  <meta property="og:description" content="Premium accommodations for FIFA 2026. Book verified stays in host cities." />
+  <meta property="og:image" content="https://i.imgur.com/9PzXQ9L.jpg" />
+  <meta property="og:type" content="website" />
 
-    <!-- Facebook / WhatsApp Preview Fix -->
-    <meta property="og:title" content="FIFA 2026 Travel | Premium Rooms Booking" />
-    <meta property="og:description" content="Book luxury accommodations for FIFA 2026. Limited availability. Secure your stay now!" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f6f8fb;
+      color: #122033;
+    }
 
-    <!-- FIXED IMAGE (WORKING WITH FACEBOOK) -->
-    <meta property="og:image" content="https://i.imgur.com/9PzXQ9L.jpg" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
+    /* NAV */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 18px 40px;
+      background: white;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+    }
 
-    <meta property="og:url" content="https://gopalakumar.github.io/landing-pages/" />
-    <meta property="og:type" content="website" />
+    .logo {
+      font-weight: 800;
+      font-size: 20px;
+      color: #0A2540;
+    }
 
-    <!-- Twitter Preview -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="FIFA 2026 Travel | Premium Rooms Booking" />
-    <meta name="twitter:description" content="Book luxury accommodations for FIFA 2026. Limited availability. Secure your stay now!" />
-    <meta name="twitter:image" content="https://i.imgur.com/9PzXQ9L.jpg" />
+    .menu a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #444;
+      font-weight: 500;
+    }
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f6f8fb;
-            color: #122033;
-        }
+    .btn {
+      background: #FF6B1A;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      text-decoration: none;
+    }
 
-        header {
-            background: #0A2540;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
+    /* HERO */
+    .hero {
+      text-align: center;
+      padding: 70px 20px;
+      background: linear-gradient(135deg, #0A2540, #163d66);
+      color: white;
+    }
 
-        .hero {
-            padding: 80px 20px;
-            text-align: center;
-            background: linear-gradient(135deg, #0A2540, #163d66);
-            color: white;
-        }
+    .hero h1 {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
 
-        .btn {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 25px;
-            background: #FF6B1A;
-            color: white;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
+    .hero p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
 
-        .btn:hover {
-            background: #e85c10;
-        }
+    /* SEARCH BOX */
+    .search-box {
+      background: white;
+      max-width: 900px;
+      margin: -40px auto 40px;
+      padding: 20px;
+      border-radius: 12px;
+      display: flex;
+      gap: 10px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      flex-wrap: wrap;
+    }
 
-        .container {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
+    .search-box select,
+    .search-box input {
+      flex: 1;
+      padding: 12px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #0A2540;
-            color: white;
-            margin-top: 40px;
-        }
-    </style>
+    .search-box button {
+      background: #FF6B1A;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    /* STATS */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      text-align: center;
+      margin: 40px 0;
+    }
+
+    .stat {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      width: 150px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .stat h2 {
+      margin: 0;
+      color: #0A2540;
+    }
+
+    /* FEATURES */
+    .section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    }
+
+    .card span {
+      font-size: 30px;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>FIFA 2026 Travel Deals</h1>
-</header>
+<!-- NAV -->
+<div class="nav">
+  <div class="logo">Hookrooms</div>
+  <div class="menu">
+    <a href="#">Search</a>
+    <a href="#">Destinations</a>
+    <a href="#">Why Us</a>
+    <a class="btn" href="https://wa.me/971500000000">Book Now</a>
+  </div>
+</div>
 
-<section class="hero">
-    <h1>Book Premium Rooms for FIFA 2026</h1>
-    <p>Limited availability – Secure your stay before prices increase</p>
+<!-- HERO -->
+<div class="hero">
+  <h1>Experience FIFA 2026 in Style</h1>
+  <p>Premium accommodations in world-class host cities</p>
+</div>
 
-    <!-- WhatsApp CTA -->
-    <a class="btn" href="https://wa.me/971500000000?text=Hi%20I%20want%20FIFA%202026%20hotel%20booking" target="_blank">
-        Book Now on WhatsApp
-    </a>
-</section>
+<!-- SEARCH -->
+<div class="search-box">
+  <select>
+    <option>Select City</option>
+    <option>Doha</option>
+    <option>Dubai</option>
+    <option>Riyadh</option>
+  </select>
 
-<section class="container">
-    <h2>Why Book With Us?</h2>
-    <ul>
-        <li>✔ Premium hotel locations</li>
-        <li>✔ Best prices for FIFA 2026</li>
-        <li>✔ Instant confirmation</li>
-        <li>✔ Limited availability</li>
-    </ul>
-</section>
+  <input type="date" />
+  <input type="date" />
 
-<footer>
-    © 2026 FIFA Travel Booking Page
-</footer>
+  <button>Search Homes</button>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat">
+    <h2>150K+</h2>
+    <p>Bookings</p>
+  </div>
+
+  <div class="stat">
+    <h2>50K+</h2>
+    <p>Hosts</p>
+  </div>
+
+  <div class="stat">
+    <h2>4.9★</h2>
+    <p>Rating</p>
+  </div>
+
+  <div class="stat">
+    <h2>24/7</h2>
+    <p>Support</p>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section">
+  <h2>Why Choose Hookrooms for FIFA 2026</h2>
+
+  <div class="features">
+    <div class="card">
+      <span>💰</span>
+      <h3>Best Prices Guaranteed</h3>
+      <p>Compare thousands of premium properties at best rates.</p>
+    </div>
+
+    <div class="card">
+      <span>🏆</span>
+      <h3>Verified Hosts</h3>
+      <p>All hosts are personally verified for quality and safety.</p>
+    </div>
+
+    <div class="card">
+      <span>🛡️</span>
+      <h3>100% Protection</h3>
+      <p>Full refund guarantee and secure payments.</p>
+    </div>
+
+    <div class="card">
+      <span>⚡</span>
+      <h3>Instant Booking</h3>
+      <p>Book in seconds with instant confirmation.</p>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
